@@ -47,13 +47,13 @@
 	<a class="button button1" href="https://renzelpretzel0125.github.io/renzelpretzel0125.github.io-videos/">Videos</a>
   </th>
   <th>
-    <a class="button button1" href="https://jlazaro2.github.io/hackathon2023_website/">Teachers</a>
+    <a class="button button1" href="https://renzelpretzel0125.github.io/renzelpretzel0125.github.io-teachers/">Teachers</a>
   </th>
   <th>
-    <a class="button button1" href="https://jlazaro2.github.io/hackathon2023_website/">Students</a>
+    <a class="button button1" href="https://renzelpretzel0125.github.io/renzelpretzel0125.github.io-students/">Students</a>
   </th>
   <th>
-    <a class="button button1" href="https://jlazaro2.github.io/hackathon2023_website/">About Us</a>
+    <a class="button button1" href="https://renzelpretzel0125.github.io/renzelpretzel0125.github.io-about_us/">About Us</a>
   </th>
   </tr>
   </table>
@@ -61,9 +61,11 @@
 	<p> </p>
 	<p> </p>
 	
-	<table class = "center">
+	<table class="center">
+    <tr>
+    <th>
 		<button onclick="getCurTime()" type="button">Get current time position</button>
-		<button onclick="setCurTime()" type="button">Set time position to 5 seconds</button><br> 
+		<button onclick="setCurTime()" type="button">Reset Video</button><br> 
 			
 
 		<video id="myVideo" width="320" height="176" controls>
@@ -86,10 +88,18 @@
 	} 
 
 	function setCurTime() { 
-  		vid.currentTime=5;
+  		vid.currentTime=0;
 	} 
+	
+	function pauseVideo() {
+		if (vid.currentTime % 15 == 0) {
+			vid.pause();
+		}
+	}
 	</script> 
     	</video>
+        </th>
+        </tr>
 	</table>
   
 
